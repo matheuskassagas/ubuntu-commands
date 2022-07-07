@@ -4,48 +4,37 @@ sudo apt-get upgrade -y
 sudo apt-get update
 ```
 
-#Atualizar Snap 
-$sudo killall snap-store
+# Atualizar Snap 
+```
+sudo killall snap-store
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo snap refresh
+```
 
-$sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo snap refresh
+# Remover drivers da placa de video
+```
+sudo apt-get remove --purge nvidia-* -y
+```
 
-#Remover drivers da placa de video
-$sudo apt-get remove --purge nvidia-* -y
-
-$sudo ubuntu-drivers autoinstall
-
-$sudo reboot
-
-$sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-515 libvulkan1 libvulkan1:i386
+# Atulizar drivres
+```
+sudo ubuntu-drivers autoinstall
+sudo add-apt-repository ppa:graphics-drivers/ppa && sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install -y nvidia-driver-515 libvulkan1 libvulkan1:i386
+sudo reboot
+```
 
 # Install DOCKER on ubuntu
-
-$ sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
-
-$ sudo mkdir -p /etc/apt/keyrings
-
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
-$ echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-$ sudo apt-get update
-
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-
-$ sudo docker run hello-world
-
-$ sudo chmod 666 /var/run/docker.sock
-
-$docker login
-
+```sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo docker run hello-world
+sudo chmod 666 /var/run/docker.sock
+docker login
+```
 #Install Kubernets
 $sudo apt-get install -y kubectl
 
