@@ -35,34 +35,48 @@ sudo docker run hello-world
 sudo chmod 666 /var/run/docker.sock
 docker login
 ```
-#Install Kubernets
-$sudo apt-get install -y kubectl
+# Install Kubernets
+```
+```
 
-$sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# Install PIP on Ubuntu
+```
+sudo apt-get -y install python3-pip
+```
 
-$curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+# Install PYTHON on Ubuntu
+```
+sudo apt install python3
+```
 
-#Install PIP on Ubuntu
-$ sudo apt-get -y install python3-pip
+# LocalStack
+```
+pip3 install localstack
+```
 
-#Install PYTHON on Ubuntu
-$ sudo apt install python3
+# AWS CLI LOCAL
+```
+pip3 install awscli-local
+```
 
-$pip3 install localstack
+# TerraForm local
+```
+pip3 install terraform-local
+```
 
-$pip3 install awscli-local
-
-$pip3 install terraform-local
-
+# Teste para ver o LocalStack
+```
 localstack start -d
 localstack status docker
 localstack status services
+```
 
-#Install GIT on Ubuntu
-$ sudo apt install git
-$ git config --global user.email "<email>"
-$ git config --global user.name "<user>"
-
+# Install GIT on Ubuntu
+```
+sudo apt install git
+git config --global user.email "<email>"
+git config --global user.name "<user>"
+```
 
 
 
