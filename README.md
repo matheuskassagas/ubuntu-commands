@@ -67,6 +67,13 @@ pip3 install localstack
 pip3 install awscli-local
 ```
 
+# Configurar credenciais 
+
+- Configure o aws cli com o comando:
+```
+aws configure
+```
+
 # TerraForm local
 ```
 pip3 install terraform-local
