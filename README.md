@@ -57,6 +57,14 @@ $ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $
 $ sudo apt-get update && sudo apt-get install terraform
 ```
 
+# Ansible
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt-get install ansible
+```
+
 # LocalStack
 ```
 pip3 install localstack
