@@ -119,13 +119,5 @@ sudo apt -y install nodejs
 
 # Mangohud
 ```
-sudo apt-get update
-sudo apt-get -y install mangohud
-```
-
-# Remove MangoHud
-```
-sudo apt-get -y autoremove mangohud
-sudo apt-get -y purge mangohud
-sudo apt-get -y autoremove --purge mangohud
+https://github.com/flightlessmango/MangoHud
 ```
